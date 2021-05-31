@@ -1,0 +1,22 @@
+{
+  "name": "google-homepage",
+  "version": "1.0.0",
+  "description": "Clone of Google homepage",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevmwhitfield/google-homepage.git"
+  },
+  "author": "Steven Whitfield",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevmwhitfield/google-homepage/issues"
+  },
+  "homepage": "https://github.com/stevmwhitfield/google-homepage#readme",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
