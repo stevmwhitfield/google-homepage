@@ -16,7 +16,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
   }
 }
 
@@ -29,16 +29,16 @@ a {
 
 header {
   position: relative;
-  top: 16px;
+  top: 1rem;
 
   #header-left {
     position: absolute;
-    margin-top: 8px;
-    margin-left: 10px;
+    margin-top: 0.5rem;
+    margin-left: 0.625rem;
 
     a {
       display: inline-block;
-      padding-left: 16px;
+      padding-left: 1rem;
       color: $header-link-color;
     }
   }
@@ -46,22 +46,130 @@ header {
   #header-right {
     position: relative;
     float: right;
-    margin-top: 8px;
-    margin-right: 28px;
+    margin-top: 0.5rem;
+    margin-right: 1.75rem;
     display: flex;
     align-items: center;
 
     a {
-      padding-left: 16px;
+      margin-left: 1rem;
       color: $header-link-color;
+    }
+
+    #app-launcher {
+      background-image: url(../images/apps.svg);
+      background-repeat: no-repeat;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    #sign-in {
+      margin-left: 1rem;
+      padding: 0 1rem;
+      background: #4285f4;
+      color: white;
+      font-weight: bold;
+      border: none;
+      height: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+      }
     }
   }
 }
 
-main {
-  margin-top: 90px;
+#home {
+  margin-top: 14rem;
+  height: calc(100% - 17rem);
 }
 
 .center {
   margin: 0 auto;
+}
+
+.logo-container {
+  width: calc(min(70%, 17rem));
+  //margin-top: 9rem;
+}
+
+.search-container {
+  width: calc(min(90%, 36rem));
+  padding: 1.5rem;
+}
+
+.search-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  border: 1px #dfe1e5 solid;
+  border-radius: 1.5rem;
+
+  &:hover {
+    box-shadow: 0px 1px 6px rgba(33, 33, 33, 0.3);
+  }
+
+  img {
+    margin-left: 0.6rem;
+    width: 1.2rem;
+  }
+}
+
+#search {
+  width: calc(100% - 2rem);
+  margin-right: 1.1rem;
+  height: 2.5rem;
+  border: none;
+}
+
+.button-container {
+  width: calc(min(80%, 20rem));
+  display: flex;
+  justify-content: center;
+
+  input[type="submit"] {
+    padding: 0.5rem 1em;
+    margin: 0.75rem 0.5rem;
+    background-color: lighten($footer-color, 2);
+    border: none;
+    color: lighten(#000, 30);
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px darken($footer-color, 10) solid;
+      box-shadow: 0, 1px, 1px, rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+#footer {
+  width: 100%;
+  height: 3rem;
+  background: $footer-color;
+  font-size: 0.9rem;
+
+  .footer-left {
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-left: 2rem;
+      color: darken($footer-color, 50);
+    }
+  }
+
+  .footer-right {
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 2rem;
+      color: darken($footer-color, 50);
+    }
+  }
 }
